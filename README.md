@@ -16,13 +16,13 @@ Software requerido:
 La comunicación entre la raspberry y el Arduino UNO se realiza mediante el puerto serial, lo cual requiere paquetes específicos de ROS, los cuales se instalan siguiendo el siguiente tutorial: 
 https://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup
 
-            El Siguiente código es cargado en el Arduino: 
-                        #if (ARDUINO >= 100)
+ El Siguiente código es cargado en el Arduino: 
+           
+            #if (ARDUINO >= 100)
             #include <Arduino.h>
             #else
             #include <WProgram.h>
             #endif
-
             #include <ros.h>
             #include <std_msgs/Int16.h>
             #include <Servo.h>
@@ -115,6 +115,7 @@ https://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup
             }
 
 Y en la raspberry se debera ejecutar el core de ROS, y el nodo de comunicacion serial para el Arduino, Una vez hecho esto se ejecuta el siguiente codigo de python el cual permite la teleopreacion del robot. 
+
             #!/usr/bin/env python
             license removed for brevity
             import rospy
@@ -203,3 +204,16 @@ Y en la raspberry se debera ejecutar el core de ROS, y el nodo de comunicacion s
                     motor_control()
                 except rospy.ROSInterruptException:
                     pass
+
+El mapeo de las teclas es: 
+•	W: Adelante 
+•	A: izquierda 
+•	S: atrás
+•	D: derecha
+•	Q: detener 
+•	T: movimiento arriba garra 
+•	G: movimiento abajo garra 
+•	Y: movimiento arriba pala
+•	H: movimiento abajo pala
+•	R: salir del programa
+De esta manera el robot es completamente pilotado en modo tele operación
