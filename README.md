@@ -206,14 +206,14 @@ Y en la raspberry se debera ejecutar el core de ROS, y el nodo de comunicacion s
                     pass
 
 El mapeo de las teclas es: 
-W: Adelante 
-A: izquierda 
-S: atrás
-D: derecha
-Q: detener 
-T: movimiento arriba garra 
-G: movimiento abajo garra 
-Y: movimiento arriba pala
-H: movimiento abajo pala
-R: salir del programa
+-W: Adelante 
+-A: izquierda 
+-S: atrás
+-D: derecha
+-Q: detener 
+-T: movimiento arriba garra 
+-G: movimiento abajo garra 
+-Y: movimiento arriba pala
+-H: movimiento abajo pala
+-R: salir del programa
 De esta manera el robot es completamente pilotado en modo tele operación
